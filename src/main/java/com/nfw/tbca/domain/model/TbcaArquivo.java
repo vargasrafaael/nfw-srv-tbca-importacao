@@ -27,11 +27,20 @@ public class TbcaArquivo {
     public static class Alimento {
         private String codigo;
         private String nome;
+        @JsonProperty("tipo_alimento") private String tipoAlimento;
+        private String grupo;
+        @JsonProperty("nome_cientifico") private String nomeCientifico;
         private List<Porcao> porcoes;
         public String getCodigo() { return codigo; }
         public void setCodigo(String codigo) { this.codigo = codigo; }
         public String getNome() { return nome; }
         public void setNome(String nome) { this.nome = nome; }
+        public String getTipoAlimento() { return tipoAlimento; }
+        public void setTipoAlimento(String tipoAlimento) { this.tipoAlimento = tipoAlimento; }
+        public String getGrupo() { return grupo; }
+        public void setGrupo(String grupo) { this.grupo = grupo; }
+        public String getNomeCientifico() { return nomeCientifico; }
+        public void setNomeCientifico(String nomeCientifico) { this.nomeCientifico = nomeCientifico; }
         public List<Porcao> getPorcoes() { return porcoes; }
         public void setPorcoes(List<Porcao> porcoes) { this.porcoes = porcoes; }
     }

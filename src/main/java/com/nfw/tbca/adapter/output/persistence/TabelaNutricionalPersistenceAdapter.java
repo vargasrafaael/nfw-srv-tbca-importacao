@@ -61,6 +61,9 @@ public class TabelaNutricionalPersistenceAdapter implements TabelaNutricionalRep
             alimentoEntity.setTabela(tabela);
             alimentoEntity.setCodigoAlimentoOrigem(alimento.getCodigo());
             alimentoEntity.setNome(alimento.getNome());
+            alimentoEntity.setTipoAlimento(alimento.getTipoAlimento());
+            alimentoEntity.setGrupo(alimento.getGrupo());
+            alimentoEntity.setNomeCientifico(alimento.getNomeCientifico());
 
             if (alimento.getPorcoes() != null) for (TbcaArquivo.Porcao porcao : alimento.getPorcoes()) {
                 AlimentoPorcaoEntity porcaoEntity = new AlimentoPorcaoEntity();
