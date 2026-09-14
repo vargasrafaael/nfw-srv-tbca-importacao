@@ -1,0 +1,22 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nutriflow
+    username: postgres
+    password: postgres
+    driver-class-name: "org.postgresql.Driver"
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate.jdbc.batch_size: 100
+      hibernate.order_inserts: true
+
+tbca:
+  importacao:
+    pasta-pendentes: ${TBCA_IMPORT_PENDING_DIR:importacao/pendentes}
+    pasta-processados: ${TBCA_IMPORT_PROCESSED_DIR:importacao/processados}
+    tamanho-lote: ${TBCA_IMPORT_BATCH_SIZE:100}
